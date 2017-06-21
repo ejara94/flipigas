@@ -3,6 +3,11 @@
 #include <QSqlQuery>
 #include <QSqlError>
 
+/**
+ * @brief DBManager::DBManager
+ * @param path
+ */
+
 DBManager::DBManager(const QString &path)
 {
        m_db = QSqlDatabase::addDatabase("QSQLITE");

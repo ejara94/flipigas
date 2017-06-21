@@ -12,7 +12,8 @@ signin::signin(QWidget *parent) :
     ui(new Ui::signin)
 {
     ui->setupUi(this);
-    db = new DBManager("/home/ejara/SEMINARIO/flipigas/users.db");
+    //db = new DBManager("/home/ejara/SEMINARIO/flipigas/users.db");
+    db= new DBManager ("/home/nakio/semi/users.db");
 }
 
 signin::~signin()
