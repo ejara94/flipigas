@@ -11,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     db = new DBManager("/home/ejara/SEMINARIO/flipigas/users.db");
     qDebug()<<"Aplicacion iniciada";
+    qDebug()<<db->calculateRequests();
 }
 
 MainWindow::~MainWindow()

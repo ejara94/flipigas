@@ -17,9 +17,12 @@ public:
     explicit request_form(QWidget *parent = 0);
     ~request_form();
     DBManager * db;
+//    QString ;
 
 private slots:
     void on_buttonBox_accepted();
+
+    void on_commandLinkButton_clicked();
 
 private:
     Ui::request_form *ui;

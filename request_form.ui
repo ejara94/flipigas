@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>613</width>
-    <height>400</height>
+    <width>684</width>
+    <height>451</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>360</y>
+     <x>320</x>
+     <y>400</y>
      <width>341</width>
      <height>32</height>
     </rect>
@@ -33,88 +33,12 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>40</y>
-     <width>551</width>
-     <height>321</height>
+     <y>20</y>
+     <width>631</width>
+     <height>371</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
-    <item row="0" column="0" colspan="2">
-     <widget class="QGroupBox" name="groupBox">
-      <property name="title">
-       <string>Cilindros</string>
-      </property>
-      <widget class="QSpinBox" name="gal7">
-       <property name="geometry">
-        <rect>
-         <x>80</x>
-         <y>0</y>
-         <width>48</width>
-         <height>27</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QSpinBox" name="gal15">
-       <property name="geometry">
-        <rect>
-         <x>230</x>
-         <y>0</y>
-         <width>48</width>
-         <height>27</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QSpinBox" name="gal45">
-       <property name="geometry">
-        <rect>
-         <x>400</x>
-         <y>0</y>
-         <width>48</width>
-         <height>27</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label">
-       <property name="geometry">
-        <rect>
-         <x>140</x>
-         <y>0</y>
-         <width>67</width>
-         <height>17</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>7 Kg</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_2">
-       <property name="geometry">
-        <rect>
-         <x>300</x>
-         <y>0</y>
-         <width>67</width>
-         <height>17</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>15 Kg</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_3">
-       <property name="geometry">
-        <rect>
-         <x>460</x>
-         <y>0</y>
-         <width>67</width>
-         <height>17</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>45 Kg</string>
-       </property>
-      </widget>
-     </widget>
-    </item>
     <item row="1" column="0">
      <widget class="QLabel" name="cerroLabel">
       <property name="text">
@@ -226,6 +150,107 @@
     </item>
     <item row="3" column="1">
      <widget class="QTextEdit" name="previewText"/>
+    </item>
+    <item row="0" column="0" colspan="2">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>Cilindros</string>
+      </property>
+      <widget class="QCommandLinkButton" name="commandLinkButton">
+       <property name="geometry">
+        <rect>
+         <x>590</x>
+         <y>0</y>
+         <width>31</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Ingresar</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_kg">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>0</y>
+         <width>85</width>
+         <height>27</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>5 Kg</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>15 Kg</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>45 Kg</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QSpinBox" name="spinBox_quantity">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>0</y>
+         <width>48</width>
+         <height>27</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>0</y>
+         <width>67</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Cantidad</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>0</y>
+         <width>71</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Capacidad</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_catalitic">
+       <property name="geometry">
+        <rect>
+         <x>424</x>
+         <y>0</y>
+         <width>151</width>
+         <height>27</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Catalitico</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>No Catalitico</string>
+        </property>
+       </item>
+      </widget>
+     </widget>
     </item>
    </layout>
   </widget>

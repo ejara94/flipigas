@@ -2,6 +2,7 @@
 #include <QDebug>
 #include <QSqlQuery>
 #include <QSqlError>
+#include <QMessageBox>
 
 DBManager::DBManager(const QString &path)
 {
@@ -91,15 +92,12 @@ bool DBManager::personExists(const QString &user, const QString &pass, const QSt
     return r;
 }
 
-bool DBManager::addRequest(const int &gal7, const int &gal15, const int &gal45, const QString &hill, const QString &payment,  const QString &hour)
+bool DBManager::addRequest(const QString &hill, const QString &payment,  const QString &hour)
 {
     QSqlQuery query;
 
-    query.prepare("INSERT INTO requests (seven_gal, fifteen_gal, fourty_five_gal, hill, payment, hour) "
-                  "VALUES (:7_gal, :15_gal, :45_gal, :hill, :payment, :hour);");
-    query.bindValue(":7_gal", gal7);
-    query.bindValue(":15_gal", gal15);
-    query.bindValue(":45_gal", gal45);
+    query.prepare("INSERT INTO requests (hour, hill, payment) "
+                  "VALUES (:hour, :hill, :payment);");
     query.bindValue(":hill", hill);
     query.bindValue(":payment", payment);
     query.bindValue(":hour", hour);
@@ -113,4 +111,43 @@ bool DBManager::addRequest(const int &gal7, const int &gal15, const int &gal45, 
     }
     return true;
 }
+
+bool DBManager::addGalon(const QString &type, const int quantity, const QString &catalitic)
+{
+    //preguntarle a la bd por el pedido actual
+    QSqlQuery query;
+    int aux_id_pedido = calculateRequests() + 1;
+    query.prepare("INSERT INTO galons (id_request, type, quantity, catalitic) "
+                  "VALUES (:id_request, :type, :quantity, :catalitic);");
+    query.bindValue(":id_request",aux_id_pedido);
+    query.bindValue(":type", type);
+    query.bindValue(":quantity", quantity);
+    query.bindValue(":catalitic", catalitic);
+    bool success = query.exec();
+    if(!success)
+        {
+            qDebug()<<"addGalon error: "
+                    << query.lastError();
+            return false;
+        }
+    return true;
+
+}
+
+int DBManager::calculateRequests(){
+
+    QSqlQuery query;
+    query.prepare("SELECT last_insert_rowid() FROM requests;");
+    int aux_id=0;
+    if(query.exec())
+    {
+
+        while(query.next())
+        {
+            aux_id++;
+        }
+    }
+    return aux_id;
+}
+
 
