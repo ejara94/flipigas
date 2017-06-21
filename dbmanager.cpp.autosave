@@ -2,6 +2,7 @@
 #include <QDebug>
 #include <QSqlQuery>
 #include <QSqlError>
+#include <QMessageBox>
 
 DBManager::DBManager(const QString &path)
 {
@@ -111,6 +112,7 @@ bool DBManager::addRequest(const int &gal7, const int &gal15, const int &gal45, 
                  << query.lastError();
         return false;
     }
+    QMessageBox::information(this, "Solicitud", "Solicitud ingresada correctamente.\nBienvenido.");
     return true;
 }
 

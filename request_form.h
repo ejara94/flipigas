@@ -1,6 +1,7 @@
 #ifndef REQUEST_FORM_H
 #define REQUEST_FORM_H
 #include <dbmanager.h>
+#include <QTime>
 
 #include <QDialog>
 

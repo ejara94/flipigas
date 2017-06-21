@@ -123,7 +123,68 @@
      </widget>
     </item>
     <item row="1" column="1">
-     <widget class="QComboBox" name="cerroComboBox"/>
+     <widget class="QComboBox" name="cerroComboBox">
+      <item>
+       <property name="text">
+        <string>Los Placeres</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Cordillera</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Baron</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Larraín</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Yungay</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>La Cruz</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Artillería</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alegre</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Concepción</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Playa Ancha</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Cárcel</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mariposa</string>
+       </property>
+      </item>
+     </widget>
     </item>
     <item row="2" column="0">
      <widget class="QLabel" name="payLabel">
@@ -133,7 +194,28 @@
      </widget>
     </item>
     <item row="2" column="1">
-     <widget class="QComboBox" name="payComboBox"/>
+     <widget class="QComboBox" name="payComboBox">
+      <item>
+       <property name="text">
+        <string>Efectivo</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Cheque</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RedCompra</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Medios de pago no tradicionales</string>
+       </property>
+      </item>
+     </widget>
     </item>
     <item row="3" column="0">
      <widget class="QLabel" name="label_4">

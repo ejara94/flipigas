@@ -26,5 +26,9 @@ void request_form::on_buttonBox_accepted()
                    timeString);
 
     //mostrar texto en el lineText
+   // if(values de las otras weasChanged)
+            //recalcula el texto
+            //setText
+            //blocksignals
     // Ingresarlos a la ... db?
 }
