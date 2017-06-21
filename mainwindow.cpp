@@ -9,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    db = new DBManager("/home/ejara/SEMINARIO/flipigas/users.db");
+    db = new DBManager("/home/luis/Desktop/Seminario/Tarea/flipigas/users.db");
     qDebug()<<"Aplicacion iniciada";
 
 }

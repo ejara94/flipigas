@@ -12,7 +12,7 @@ signin::signin(QWidget *parent) :
     ui(new Ui::signin)
 {
     ui->setupUi(this);
-    db = new DBManager("/home/ejara/SEMINARIO/flipigas/users.db");
+    db = new DBManager("/home/luis/Desktop/Seminario/Tarea/flipigas/users.db");
 }
 
 signin::~signin()
