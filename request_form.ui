@@ -50,6 +50,11 @@
      <widget class="QComboBox" name="cerroComboBox">
       <item>
        <property name="text">
+        <string>-- seleccione cerro --</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
         <string>Los Placeres</string>
        </property>
       </item>
@@ -119,6 +124,11 @@
     </item>
     <item row="2" column="1">
      <widget class="QComboBox" name="payComboBox">
+      <item>
+       <property name="text">
+        <string>-- seleccione medio de pago --</string>
+       </property>
+      </item>
       <item>
        <property name="text">
         <string>Efectivo</string>

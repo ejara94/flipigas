@@ -134,6 +134,14 @@ bool DBManager::addGalon(const QString &type, const int quantity, const QString 
 
 }
 
+void DBManager::removeGalon()
+{
+    QSqlQuery query;
+    query.prepare("DELETE FROM galons WHERE id_request = :id_request;");
+    query.bindValue(":id_request", calculateRequests()+1);
+    query.exec();
+}
+
 int DBManager::calculateRequests(){
 
     QSqlQuery query;

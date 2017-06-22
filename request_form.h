@@ -19,10 +19,16 @@ public:
     DBManager * db;
 //    QString ;
 
+public slots:
+    QString on_cerroComboBox_currentTextChanged(const QString &arg1);
 private slots:
     void on_buttonBox_accepted();
 
     void on_commandLinkButton_clicked();
+
+    void on_buttonBox_rejected();
+
+    QString on_payComboBox_currentTextChanged(const QString &arg1);
 
 private:
     Ui::request_form *ui;

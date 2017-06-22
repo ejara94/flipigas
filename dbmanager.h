@@ -19,10 +19,13 @@ public:
     bool addRequest(const QString& hill,
                     const QString& payment,
                     const QString& hour);
+    int calculateRequests();
+
     bool addGalon(const QString& type,
                   const int quantity,
                   const QString& catalitic);
-    int calculateRequests();
+    void removeGalon();
+
 private:
     QSqlDatabase m_db;
 };
