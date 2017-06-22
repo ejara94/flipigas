@@ -14,11 +14,12 @@ public:
     int NumberOfRequests;   //Numero de solicitudes
     int NumberOfDeliveries; //Numero de entregas
     int TimeDelivery;       //Tiempo de entrega, que deberia ser timpo time
+    int AuxTimeDelivery;    //aux de tiempo de entrega
     int TimeofOccupation;   //Tiempo total de ocupacion
 
     //Logics
 
-    void SubtractGalons(char T,int );   // Restar Solicitud
+    void SubtractGalons(int T,int Peso );   // Restar Solicitud
     void AddDelivery();      // Sumar N° entregas
     void SumTimeOccupation();// Tiempo de ocupacion
 
@@ -26,14 +27,20 @@ public:
 
     int GetRequests();      // Obtener solicitudes
     int GetDeliveries();    //   "     N° entregas
-    int GetGalons();        //   "     N° Galones
+    int GetGalons(int tipo);        //   "     N° Galones
     int GetTimeDelivery();  //Tiempo de entrega
     int GetTimeOccupation();//Tiempo de ocupacion
 
+    //Setters
 
+    void SetTimeDelivery(int time);
+
+/*
 signals:
 
 public slots:
+
+*/
 };
 
 #endif // TRUK_H

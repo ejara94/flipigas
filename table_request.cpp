@@ -12,3 +12,8 @@ Table_Request::~Table_Request()
 {
     delete ui;
 }
+
+void Table_Request::on_RequestList_activated(const QModelIndex &index)
+{
+
+}

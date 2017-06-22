@@ -15,6 +15,9 @@ public:
     explicit Table_Request(QWidget *parent = 0);
     ~Table_Request();
 
+private slots:
+    void on_RequestList_activated(const QModelIndex &index);
+
 private:
     Ui::Table_Request *ui;
 };
