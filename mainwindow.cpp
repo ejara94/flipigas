@@ -21,6 +21,10 @@ MainWindow::~MainWindow()
     qDebug()<<"Conexion cerrada";
 }
 
+/**
+ * @brief MainWindow::on_pushButton_Entrar_clicked
+ */
+
 
 void MainWindow::on_pushButton_Entrar_clicked()
 {

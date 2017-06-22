@@ -17,15 +17,20 @@ SOURCES += main.cpp\
     secdialog.cpp \
     request_form.cpp \
     signin.cpp \
-    dbmanager.cpp
+    dbmanager.cpp \
+    table_request.cpp \
+    truk.cpp
 
 HEADERS  += mainwindow.h \
     secdialog.h \
     request_form.h \
     signin.h \
-    dbmanager.h
+    dbmanager.h \
+    table_request.h \
+    truk.h
 
 FORMS    += mainwindow.ui \
     secdialog.ui \
     request_form.ui \
-    signin.ui
+    signin.ui \
+    table_request.ui
