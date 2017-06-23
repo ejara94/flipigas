@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>684</width>
-    <height>451</height>
+    <width>734</width>
+    <height>504</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>400</y>
+     <x>370</x>
+     <y>460</y>
      <width>341</width>
      <height>32</height>
     </rect>
@@ -32,13 +32,19 @@
   <widget class="QWidget" name="formLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>20</x>
      <y>20</y>
-     <width>631</width>
-     <height>371</height>
+     <width>749</width>
+     <height>141</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
+    <property name="fieldGrowthPolicy">
+     <enum>QFormLayout::FieldsStayAtSizeHint</enum>
+    </property>
+    <property name="rowWrapPolicy">
+     <enum>QFormLayout::DontWrapRows</enum>
+    </property>
     <item row="1" column="0">
      <widget class="QLabel" name="cerroLabel">
       <property name="text">
@@ -151,16 +157,6 @@
       </item>
      </widget>
     </item>
-    <item row="3" column="0">
-     <widget class="QLabel" name="label_4">
-      <property name="text">
-       <string>Vista Previa Pedido</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="1">
-     <widget class="QTextEdit" name="previewText"/>
-    </item>
     <item row="0" column="0" colspan="2">
      <widget class="QGroupBox" name="groupBox">
       <property name="title">
@@ -169,7 +165,7 @@
       <widget class="QCommandLinkButton" name="commandLinkButton">
        <property name="geometry">
         <rect>
-         <x>590</x>
+         <x>630</x>
          <y>0</y>
          <width>31</width>
          <height>31</height>
@@ -262,7 +258,46 @@
       </widget>
      </widget>
     </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>Vista Previa Pedido</string>
+      </property>
+     </widget>
+    </item>
    </layout>
+  </widget>
+  <widget class="QPlainTextEdit" name="previewText">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>150</y>
+     <width>601</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>492</width>
+     <height>192</height>
+    </size>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+   <property name="plainText">
+    <string>----------    FLIPIGAS LTDA.    ----------
+
+Solicitud n°:	%
+Cerro de Destino:	%
+Medio de Pago:	%
+
+DETALLE: %
+
+Tiempo estimado de entrega: %
+Total
+</string>
+   </property>
   </widget>
  </widget>
  <resources/>
