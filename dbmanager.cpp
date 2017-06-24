@@ -158,4 +158,23 @@ int DBManager::calculateRequests(){
     return aux_id;
 }
 
+int DBManager::calculateGalons()
+{
+    QSqlQuery query;
+    query.prepare("SELECT last_insert_rowid() FROM galons WHERE id_request = :id_request;");
+    query.bindValue(":id_request", calculateRequests()+1);
+    int aux_id=0;
+    if(query.exec())
+    {
+
+        while(query.next())
+        {
+            aux_id++;
+        }
+    }
+    return aux_id;
+}
+
+
+
 

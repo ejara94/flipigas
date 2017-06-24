@@ -20,10 +20,14 @@ public:
     QString setCerroinText(const QString &string);
     QString setPaymentinText(const QString &string);
     QString setDetail(const QString &gal, const QString &quantity, const QString &catalitic);
+    QString setStimatedTime(const int &t);
+    QString setTotal();
+    QString setRequestNumber();
 
-public slots:
-    void on_cerroComboBox_currentTextChanged(const QString &arg1);
 private slots:
+
+    void on_cerroComboBox_currentTextChanged(const QString &arg1);
+
     void on_buttonBox_accepted();
 
     void on_commandLinkButton_clicked();

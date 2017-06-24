@@ -2,12 +2,14 @@
 #include "ui_request_form.h"
 #include <QDebug>
 #include <QMessageBox>
+#include <QTextBlock>
 
 request_form::request_form(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::request_form)
 {
     ui->setupUi(this);
+    this->setRequestNumber();
 }
 
 request_form::~request_form()
@@ -16,21 +18,87 @@ request_form::~request_form()
 }
 
 QString request_form::setCerroinText(const QString &string)
-{   QString text = ui->previewText->document()->toPlainText();
-    return text;
+{
+    QTextCursor * cursor=new QTextCursor(ui->previewText->document()->findBlockByLineNumber(4));
+    cursor->beginEditBlock();
+    cursor->setKeepPositionOnInsert(true);
+    cursor->select(cursor->BlockUnderCursor);
+    cursor->removeSelectedText();
+    cursor->insertText("Cerro de Destino:	"+string+"\n");
+    cursor->endEditBlock();
 
-return string;
+
+    return string;
 }
 
 QString request_form::setPaymentinText(const QString &string)
 {
-
-return string;
+    QTextCursor * cursor=new QTextCursor(ui->previewText->document()->findBlockByLineNumber(6));
+    cursor->beginEditBlock();
+    cursor->setKeepPositionOnInsert(true);
+    cursor->select(cursor->BlockUnderCursor);
+    cursor->removeSelectedText();
+    cursor->insertText("Medio de Pago:	"+string+"\n");
+    cursor->endEditBlock();
+    return string;
 }
 
 QString request_form::setDetail(const QString &gal, const QString &quantity, const QString &catalitic)
 {
+    QTextCursor * cursor=new QTextCursor(ui->previewText->document()->findBlockByLineNumber(9));
+    cursor->beginEditBlock();
+    cursor->setKeepPositionOnInsert(true);
+//    cursor->select(cursor->BlockUnderCursor);
+//    cursor->removeSelectedText();
+    QString s = "\n>"+quantity+" Gal_"+gal+"_"+catalitic;
+    cursor->insertText(s);
+    cursor->endEditBlock();
+    return s;
+}
 
+QString request_form::setStimatedTime(const int &t)
+{
+    QString t_aux = QString::number(t);
+    int lines = (db->calculateGalons())+10;
+
+    QTextCursor * cursor=new QTextCursor(ui->previewText->document()->findBlockByLineNumber(lines));
+    cursor->beginEditBlock();
+    cursor->setKeepPositionOnInsert(true);
+    cursor->select(cursor->BlockUnderCursor);
+    cursor->removeSelectedText();
+    QString s = "Tiempo Estimado de Entrega:   "+t_aux+"\n";
+    cursor->insertText(s);
+    cursor->endEditBlock();
+    return s;
+}
+
+QString request_form::setTotal()
+{
+    int total = 0; //db->CalculateTotal()
+    QString t_aux = QString::number(total);
+    int lines = (db->calculateGalons())+12;
+
+    QTextCursor * cursor=new QTextCursor(ui->previewText->document()->findBlockByLineNumber(lines));
+    cursor->beginEditBlock();
+    cursor->setKeepPositionOnInsert(true);
+    cursor->select(cursor->BlockUnderCursor);
+    cursor->removeSelectedText();
+    QString s = "TOTAL:   "+t_aux+"\n";
+    cursor->insertText(s);
+    cursor->endEditBlock();
+    return s;
+}
+
+QString request_form::setRequestNumber()
+{
+    QTextCursor * cursor=new QTextCursor(ui->previewText->document()->findBlockByLineNumber(2));
+    cursor->beginEditBlock();
+    cursor->setKeepPositionOnInsert(true);
+    cursor->select(cursor->BlockUnderCursor);
+    cursor->removeSelectedText();
+    cursor->insertText("BOLETA N°:	    "+QString::number(db->calculateRequests())+"\n");
+    cursor->endEditBlock();
+    return "holi";
 }
 
 void request_form::on_buttonBox_accepted()
@@ -52,6 +120,8 @@ void request_form::on_buttonBox_accepted()
 void request_form::on_commandLinkButton_clicked()
 {
     db->addGalon(ui->comboBox_kg->currentText(), ui->spinBox_quantity->value(), ui->comboBox_catalitic->currentText());
+    setDetail(ui->comboBox_kg->currentText(), ui->spinBox_quantity->text(),ui->comboBox_catalitic->currentText());
+    setTotal();
 
     // in ui->previewText->document()->setPlainText( &text);
     //setDetail(ui->comboBox_kg->currentText(), ui->spinBox_quantity->value(), ui->comboBox_catalitic->currentText());
@@ -67,10 +137,10 @@ void request_form::on_buttonBox_rejected()
 void request_form::on_cerroComboBox_currentTextChanged(const QString &arg1)
 {
     setCerroinText(arg1);
+    setStimatedTime(0);
 }
 
 void request_form::on_payComboBox_currentTextChanged(const QString &arg1)
 {
-    qDebug()<<arg1;
-    //Modificar boleta
+    setPaymentinText(arg1);
 }

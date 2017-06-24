@@ -289,13 +289,16 @@
     <string>----------    FLIPIGAS LTDA.    ----------
 
 Solicitud n°:	%
+
 Cerro de Destino:	%
+
 Medio de Pago:	%
 
-DETALLE: %
+	Detalle: 
 
 Tiempo estimado de entrega: %
-Total
+
+TOTAL: %
 </string>
    </property>
   </widget>

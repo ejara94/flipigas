@@ -20,6 +20,7 @@ public:
                     const QString& payment,
                     const QString& hour);
     int calculateRequests();
+    int calculateGalons();
 
     bool addGalon(const QString& type,
                   const int quantity,
