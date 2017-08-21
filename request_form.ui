@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>613</width>
-    <height>400</height>
+    <width>734</width>
+    <height>504</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>360</y>
+     <x>370</x>
+     <y>460</y>
      <width>341</width>
      <height>32</height>
     </rect>
@@ -32,89 +32,19 @@
   <widget class="QWidget" name="formLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>40</y>
-     <width>551</width>
-     <height>321</height>
+     <x>20</x>
+     <y>20</y>
+     <width>749</width>
+     <height>141</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
-    <item row="0" column="0" colspan="2">
-     <widget class="QGroupBox" name="groupBox">
-      <property name="title">
-       <string>Cilindros</string>
-      </property>
-      <widget class="QSpinBox" name="gal7">
-       <property name="geometry">
-        <rect>
-         <x>80</x>
-         <y>0</y>
-         <width>48</width>
-         <height>27</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QSpinBox" name="gal15">
-       <property name="geometry">
-        <rect>
-         <x>230</x>
-         <y>0</y>
-         <width>48</width>
-         <height>27</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QSpinBox" name="gal45">
-       <property name="geometry">
-        <rect>
-         <x>400</x>
-         <y>0</y>
-         <width>48</width>
-         <height>27</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label">
-       <property name="geometry">
-        <rect>
-         <x>140</x>
-         <y>0</y>
-         <width>67</width>
-         <height>17</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>7 Kg</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_2">
-       <property name="geometry">
-        <rect>
-         <x>300</x>
-         <y>0</y>
-         <width>67</width>
-         <height>17</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>15 Kg</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_3">
-       <property name="geometry">
-        <rect>
-         <x>460</x>
-         <y>0</y>
-         <width>67</width>
-         <height>17</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>45 Kg</string>
-       </property>
-      </widget>
-     </widget>
-    </item>
+    <property name="fieldGrowthPolicy">
+     <enum>QFormLayout::FieldsStayAtSizeHint</enum>
+    </property>
+    <property name="rowWrapPolicy">
+     <enum>QFormLayout::DontWrapRows</enum>
+    </property>
     <item row="1" column="0">
      <widget class="QLabel" name="cerroLabel">
       <property name="text">
@@ -123,7 +53,73 @@
      </widget>
     </item>
     <item row="1" column="1">
-     <widget class="QComboBox" name="cerroComboBox"/>
+     <widget class="QComboBox" name="cerroComboBox">
+      <item>
+       <property name="text">
+        <string>-- seleccione cerro --</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Los Placeres</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Cordillera</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Baron</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Larraín</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Yungay</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>La Cruz</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Artillería</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alegre</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Concepción</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Playa Ancha</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Cárcel</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mariposa</string>
+       </property>
+      </item>
+     </widget>
     </item>
     <item row="2" column="0">
      <widget class="QLabel" name="payLabel">
@@ -133,7 +129,134 @@
      </widget>
     </item>
     <item row="2" column="1">
-     <widget class="QComboBox" name="payComboBox"/>
+     <widget class="QComboBox" name="payComboBox">
+      <item>
+       <property name="text">
+        <string>-- seleccione medio de pago --</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Efectivo</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Cheque</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RedCompra</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Medios de pago no tradicionales</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="2">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>Cilindros</string>
+      </property>
+      <widget class="QCommandLinkButton" name="commandLinkButton">
+       <property name="geometry">
+        <rect>
+         <x>630</x>
+         <y>0</y>
+         <width>31</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Ingresar</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_kg">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>0</y>
+         <width>85</width>
+         <height>27</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>5 Kg</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>15 Kg</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>45 Kg</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QSpinBox" name="spinBox_quantity">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>0</y>
+         <width>48</width>
+         <height>27</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>0</y>
+         <width>67</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Cantidad</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>0</y>
+         <width>71</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Capacidad</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_catalitic">
+       <property name="geometry">
+        <rect>
+         <x>424</x>
+         <y>0</y>
+         <width>151</width>
+         <height>27</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Catalitico</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>No Catalitico</string>
+        </property>
+       </item>
+      </widget>
+     </widget>
     </item>
     <item row="3" column="0">
      <widget class="QLabel" name="label_4">
@@ -142,10 +265,42 @@
       </property>
      </widget>
     </item>
-    <item row="3" column="1">
-     <widget class="QTextEdit" name="previewText"/>
-    </item>
    </layout>
+  </widget>
+  <widget class="QPlainTextEdit" name="previewText">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>150</y>
+     <width>601</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>492</width>
+     <height>192</height>
+    </size>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+   <property name="plainText">
+    <string>----------    FLIPIGAS LTDA.    ----------
+
+Solicitud n°:	%
+
+Cerro de Destino:	%
+
+Medio de Pago:	%
+
+	Detalle: 
+
+Tiempo estimado de entrega: %
+
+TOTAL: %
+</string>
+   </property>
   </widget>
  </widget>
  <resources/>

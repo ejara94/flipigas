@@ -7,6 +7,7 @@
 #include <QtSql>
 
 
+
 signin::signin(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::signin)
@@ -49,5 +50,7 @@ void signin::on_buttonBox_accepted()
 
 void signin::on_buttonBox_rejected()
 {
+    //borrar los galons con el pedido actual
+
     close();
 }

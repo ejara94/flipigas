@@ -15,6 +15,18 @@ public:
                    const QString& type);
     bool removePerson(const QString& user);
     bool personExists(const QString &user, const QString &pass, const QString &admin);
+
+    bool addRequest(const QString& hill,
+                    const QString& payment,
+                    const QString& hour);
+    int calculateRequests();
+    int calculateGalons();
+
+    bool addGalon(const QString& type,
+                  const int quantity,
+                  const QString& catalitic);
+    void removeGalon();
+
 private:
     QSqlDatabase m_db;
 };
