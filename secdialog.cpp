@@ -24,7 +24,9 @@ void SecDialog::on_goto_request_clicked()
 
 void SecDialog::on_goto_tracking_clicked()
 {
-
+    qDebug()<<sesion;
+    vp = new Vista_Pedidos(this);
+    vp->show();
 }
 
 void SecDialog::on_goto_sells_clicked()
@@ -34,8 +36,5 @@ void SecDialog::on_goto_sells_clicked()
 
 void SecDialog::on_goto_inventory_clicked()
 {
-    qDebug()<<sesion;
-    admin = new Admin_View(this);
-    admin->show();
 
 }

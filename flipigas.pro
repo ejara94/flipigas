@@ -18,17 +18,17 @@ SOURCES += main.cpp\
     request_form.cpp \
     signin.cpp \
     dbmanager.cpp \
-    admin_view.cpp
+    vista_pedidos.cpp
 
 HEADERS  += mainwindow.h \
     secdialog.h \
     request_form.h \
     signin.h \
     dbmanager.h \
-    admin_view.h
+    vista_pedidos.h
 
 FORMS    += mainwindow.ui \
     secdialog.ui \
     request_form.ui \
     signin.ui \
-    admin_view.ui
+    vista_pedidos.ui

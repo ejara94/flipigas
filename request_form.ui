@@ -61,52 +61,17 @@
       </item>
       <item>
        <property name="text">
-        <string>Alegre</string>
+        <string>Los Placeres</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Barón</string>
+        <string>Cordillera</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Blanco</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Bellavista</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Concepción</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Delicias</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>El Litre</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>El Molino</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Esperanza</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Jiménez</string>
+        <string>Baron</string>
        </property>
       </item>
       <item>
@@ -116,87 +81,27 @@
       </item>
       <item>
        <property name="text">
+        <string>Yungay</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
         <string>La Cruz</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>La Cárcel</string>
+        <string>Artillería</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>La Florida</string>
+        <string>Alegre</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>La Merced</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>La Virgen</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Las Cañas</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Las Jarcias</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Las Monjas</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Los Placeres</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Loceras</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Lecheros</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Mariposas</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Mesilla</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Miraflores</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>O'Higgins</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Pajonal</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Panteón</string>
+        <string>Concepción</string>
        </property>
       </item>
       <item>
@@ -206,52 +111,12 @@
       </item>
       <item>
        <property name="text">
-        <string>Perdices</string>
+        <string>Cárcel</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>Polanco</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Ramaditas</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Reina Victoria</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Rodelillo</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Rocuant</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>San Juan de Dios</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>San Francisco</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Toro</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Yungay</string>
+        <string>Mariposa</string>
        </property>
       </item>
      </widget>
@@ -322,11 +187,6 @@
        <item>
         <property name="text">
          <string>5 Kg</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>11 Kg</string>
         </property>
        </item>
        <item>
