@@ -50,7 +50,7 @@ QString request_form::setDetail(const QString &gal, const QString &quantity, con
     cursor->setKeepPositionOnInsert(true);
 //    cursor->select(cursor->BlockUnderCursor);
 //    cursor->removeSelectedText();
-    QString s = "\n>"+quantity+" Gal_"+gal+"_"+catalitic;
+    QString s = "\n>"+quantity+" Galones "+gal+" "+ catalitic;
     cursor->insertText(s);
     cursor->endEditBlock();
     return s;
@@ -119,9 +119,12 @@ void request_form::on_buttonBox_accepted()
 
 void request_form::on_commandLinkButton_clicked()
 {
-    db->addGalon(ui->comboBox_kg->currentText(), ui->spinBox_quantity->value(), ui->comboBox_catalitic->currentText());
-    setDetail(ui->comboBox_kg->currentText(), ui->spinBox_quantity->text(),ui->comboBox_catalitic->currentText());
-    setTotal();
+    if(ui->spinBox_quantity->value() > 0){
+        db->addGalon(ui->comboBox_kg->currentText(), ui->spinBox_quantity->value(), ui->comboBox_catalitic->currentText());
+        setDetail(ui->comboBox_kg->currentText(), ui->spinBox_quantity->text(),ui->comboBox_catalitic->currentText());
+        setTotal();
+    }
+
 
     // in ui->previewText->document()->setPlainText( &text);
     //setDetail(ui->comboBox_kg->currentText(), ui->spinBox_quantity->value(), ui->comboBox_catalitic->currentText());

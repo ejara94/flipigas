@@ -7,7 +7,7 @@
 DBManager::DBManager(const QString &path)
 {
        m_db = QSqlDatabase::addDatabase("QSQLITE");
-     //  path ="/home/ejara/SEMINARIO/flipigas/users.db";
+     //  path ="../flipligas-master/users.db";
        m_db.setDatabaseName(path);
 
        if (!m_db.open())

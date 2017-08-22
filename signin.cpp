@@ -13,7 +13,7 @@ signin::signin(QWidget *parent) :
     ui(new Ui::signin)
 {
     ui->setupUi(this);
-    db = new DBManager("/home/ejara/SEMINARIO/flipigas/users.db");
+    db = new DBManager("../flipigas-master/users.db");
 }
 
 signin::~signin()
