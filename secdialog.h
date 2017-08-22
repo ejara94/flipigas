@@ -1,10 +1,9 @@
 #ifndef SECDIALOG_H
 #define SECDIALOG_H
-
 #include "request_form.h"
-#include "vista_pedidos.h"
-
 #include <QDebug>
+#include "admin_view.h"
+#include "vista_pedidos.h"
 
 #include <QDialog>
 
@@ -35,8 +34,8 @@ private slots:
 private:
     Ui::SecDialog *ui;
     request_form * req;
-    Vista_Pedidos * vp;
-
+    Admin_View * admin;
+    Vista_Pedidos* vi;
     //definir aqui las demas ventanas
 };
 

@@ -9,7 +9,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    //db = new DBManager("../flipigas-master/users.db");
     db = new DBManager("../flipigas-master/users.db");
     qDebug()<<"Aplicacion iniciada";
     qDebug()<<db->calculateRequests();
@@ -35,7 +34,7 @@ void MainWindow::on_pushButton_Entrar_clicked()
 
     if(db->personExists(username, password, temp_admin))
     {
-        QMessageBox::information(this, "Sesion", "Sesion iniciada correctamente.\nBienvenido.");
+        //QMessageBox::information(this, "Sesion", "Sesion iniciada correctamente.\nBienvenido.");
         hide();
         secDialog = new SecDialog(this,username);
         secDialog->show();

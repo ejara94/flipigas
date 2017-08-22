@@ -7,8 +7,9 @@
 DBManager::DBManager(const QString &path)
 {
        m_db = QSqlDatabase::addDatabase("QSQLITE");
-     //  path ="../flipigas-master/users.db";
+     //  path ="../flipligas-master/users.db";
        m_db.setDatabaseName(path);
+
        if (!m_db.open())
        {
           qDebug() << "Error: connection with database fail";
@@ -17,6 +18,7 @@ DBManager::DBManager(const QString &path)
        {
           qDebug() << "Database: connection ok";
        }
+
 }
 
 bool DBManager::addPerson(const QString& user,
