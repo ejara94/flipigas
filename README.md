@@ -1,4 +1,9 @@
 # flipigas
+
+Integrantes:-Luis Araya
+            -Esteban Jara
+            -Eduardo Arancibia
+
 Tarea/Proyecto de Seminario de Programación TEL102
 
 Tarea compilada en Qt Creator 3.5.0,Ubuntu. 
